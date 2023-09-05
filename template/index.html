@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-{% include 'slider.html' %}
+{% include 'slider.html' with slidedata=slider %}
 {% load static %}
 <section id="about-us" class="about-us">
     <div class="container" data-aos="fade-up">

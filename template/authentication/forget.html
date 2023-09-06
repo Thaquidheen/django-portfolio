@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Login</h2>
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li>Login</li>
+        </ol>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <!-- ======= Contact Section ======= -->
+ 
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="row mt-5 justify-content-center" data-aos="fade-up">
+        <div class="col-lg-4">
+            <h2>Forget Password</h2><br>
+          <form action="" method="post" role="form" >
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" id="name" placeholder="Your Email"  />
+                <div class="validate"></div>
+            </div>
+            <div class="text-center"><button class="btn btn-success" type="submit">Forget Password</button></div><br/>
+          </form>
+          <small> Have You Already Account <a href="{% url 'login' %}" >Login Account</a></small>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+{% endblock %}
